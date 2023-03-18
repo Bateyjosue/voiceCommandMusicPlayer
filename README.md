@@ -1,5 +1,3 @@
-# voiceCommandMusicPlayer
-voiceCommandMusicPlayer
 <a name="readme-top"></a>
 # 📗 Table of Contents
 
@@ -29,12 +27,8 @@ voiceCommandMusicPlayer
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 tutorHub <a name="about-project"></a>
-tutorHub is a tutor reservasation website that provide the public with an easy and convenient way to rent tutor and offer teaching services to people.
-
-- [Frontend](https://github.com/username-forGithub/tutorHub-front)<a name="rails-backend"></a>
-- [Kanban Board](https://github.com/users/Bateyjosue/projects/4/views/1)<a name="kanban-board"></a>
-![](./kanban.png)
+# 📖 voiceCommandMusicPlayer <a name="about-project"></a>
+it's a simple music player embed with the voice command functionality where be the user can use basic music player functionality using his voice such play, next, previous, pause, stop and so on.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -43,21 +37,24 @@ tutorHub is a tutor reservasation website that provide the public with an easy a
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JavaScript</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li>Rails</li>
+    <li>Python</li>
+    <li>Django</li>
   </ul>
 </details>
 
 <details>
 <summary>Database</summary>
   <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li>SQLite</li>
   </ul>
 </details>
 
@@ -65,111 +62,81 @@ tutorHub is a tutor reservasation website that provide the public with an easy a
 
 ### Key Features <a name="key-features"></a>
 
-- **tutors endpoint**
-- **Users can add/remove a tutor**
-- **Users can book a tutor**
+- **Select Music**
+- **Play, pause, stop, next, prev and loop music**
+- **Voice Command**
 
 ## 💻 Website Mockup <a name="screenshots"></a>
 
-<!-- ## Entity Relationship Diagram <a name="er-diagram"></a>
-<img width="850" alt="erd" src="https://user-images.githubusercontent.com/86082070/217819998-c8acf559-359c-4654-99e1-84027a0e6d05.jpeg"> -->
-
-<!-- Kanban Board -->
-<!-- API Docs -->
-<!-- ER DIAGRAM-->
-
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo]()
-
-## [API Documentation](https://experthub-production.up.railway.app/api-docs/index.html) <a name="api-documentation"></a>
-<img width="715" alt="api-docs" src="api1.png">
-
-<img width="703" alt="api-docs" src="api22.png"> 
-
+- [Coming soon]()
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
-## 💻 Getting Started <a name="getting-started"></a>
+# 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
-### Prerequisites
 
-Make sure you have `Git` and `Ruby` installed
-```
- gem install rails
-```
+## Prerequisites
 
-### Install
+Make sure you have `Git` and `python` installed
+
+## Install
 
 Install the project using this command:
 
 
-### db Commands
+- ### Clone the project
 
-`rails db:create`
-`rails db:migrate`
-`rails db:seed`
+      `git clone https://github.com/Bateyjosue/voiceCommandMusicPlayer.git`
 
-### To generate master.key and config/credentials.yml.enc
+- ### Change directory
 
-Run in terminal:
+      `cd voiceCommandMusicPlayer/vcmusicplayer`
 
-EDITOR=code rails credentials:edit
+- ### Install dependencies
+      `pip install -r requirements.text`
 
-This command will create a new master.key and credentials.yml.enc if they do not exist.
+- ### Make Migrate
+  ```
+  python3 man
 
-```
-  bundle install
-```
 
 ### Usage
 
 Run project using this command:
+- ### Make Migration
 
-```
-rails s
-```
+      python3 manage.py migrate //in Linux
+                    or
+      python manage.py migrate //in Windows
 
-Run tests using this command:
-```
-rake rswag
-```
+- ### Run the app
+
+      python3 manage.py runserver //in Linux
+                    or
+      python manage.py runserver //in Windows
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
-👤 **Brian Tom**
-- GitHub: [Bree]()
-- Twitter: [Bree]()
-- LinkedIn: [Bree]()
-
-👤 **Kene Agagwu**
-
-- GitHub: [kenny]()
-- LinkedIn: [kenny]()
 
 👤 **Josh Batey**
 
-- GitHub: [@zemola](https://github.com/Bateyjosue)
+- GitHub: [@Bateyjosue](https://github.com/Bateyjosue)
 - Twitter: [@Bateyjosue](https://twitter.com/Bateyjosue)
-- LinkedIn: [Josh](https://www.linkedin.com/in/josue-ishara/)
-
-👤 **Bakhtiyor**
-
-- GitHub: [Bakhtiyor]()
-- LinkedIn: [Bakhtiyor]()
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+- LinkedIn: [Josue Batey](https://www.linkedin.com/in/josue-ishara/)
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Rspec tests**
+- [ ]  **Android Version**
 
 <!-- CONTRIBUTING -->
 
