@@ -1,4 +1,6 @@
-alert("first add some songs for better expirence");
+const navs = document.querySelectorAll('.nav__link__item');
+
+console.log(navs);
 
 // SELECTING ELEMENTS.
 let ripple_buttons = document.querySelectorAll(".ripple"),
@@ -38,7 +40,7 @@ ripple_buttons.forEach((btn) => {
 
         setTimeout(() => {
             ripples.remove();
-        }, 500);
+        }, 5000);
     });
 });
 
@@ -440,3 +442,5 @@ window.addEventListener("resize", () => {
     canvas.width = canvas.parentElement.offsetWidth;
     canvas.height = canvas.parentElement.offsetHeight;
 });
+
+
