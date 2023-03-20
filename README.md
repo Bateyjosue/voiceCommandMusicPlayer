@@ -155,7 +155,6 @@ Give a ⭐️ if you like this project!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- [Microverse](https://www.microverse.org/)
 
 <!-- LICENSE -->
 
