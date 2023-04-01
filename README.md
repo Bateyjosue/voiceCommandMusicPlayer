@@ -6,9 +6,6 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [Website Mockup](#screenshots)
-  - [Kanban Board](#kanban-board)
-  - [React Frontend](#react-frontend)
-  - [API Documentation](#api-docs)
   - [🚀 Live Demo](#live-demo)
   
 - [💻 Getting Started](#getting-started)
