@@ -543,6 +543,11 @@ nav li .icon {
     text-align: center;
 }
 
+.ripple .btn-mic{
+    background: transparent;
+    border:#ff3b3b 5px solid
+}
+
 .AV-player .more-controls .volume:hover .volume-range {
     width: 100px;
 }

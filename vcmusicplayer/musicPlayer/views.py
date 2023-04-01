@@ -3,4 +3,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-  return render(request, 'player/index.html')
+    if request.method == 'GET':
+      status = request.GET.get('task')
+      print(status)
+    return render(request, 'player/index.html')

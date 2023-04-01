@@ -25,6 +25,7 @@ let ripple_buttons = document.querySelectorAll(".ripple"),
     music_array = [],
     backup_music_array = []; // Used for rearranging the music array after shuffling.
 
+    
 // RIPPLE BUTTON
 ripple_buttons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
@@ -279,12 +280,74 @@ play_btn.addEventListener("click", () => {
 });
 
 shuffle_btn.addEventListener("click", () => {
-    shuffle_btn.classList.toggle("active");
-    if (shuffle_btn.classList.contains("active")) {
-        shuffleArray(music_array);
-    } else {
-        music_array = backup_music_array;
-        return;
+    let speech = true;
+    window.SpeechRecognition = window.webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
+    recognition.interimResults = true;
+    // recognition.continuous = true;
+    recognition.onresult = (e) => {
+        const transcript = Array.from(e.results)
+        .map(result => result[0])
+        .map(result => result.transcript)
+        console.log(transcript);
+        switch(transcript[transcript.length - 1].toLowerCase()) {
+            case 'next': {
+                if (music_index > music_array.length - 1) {
+                    music_index = 0;
+                } else {
+                    music_index++;
+                }
+                LoadMusic(music_index);
+                audio.play();
+                checkPaused();
+            }
+            case 'back': {
+                if (music_index < 0) {
+                    music_index = music_array.length - 1;
+                } else {
+                    music_index--;
+                }
+                LoadMusic(music_index);
+                audio.play();
+                checkPaused();
+            }
+            case 'pause': {
+                audio.pause();
+            }
+            case 'off': {
+                audio.pause();
+            }
+            case 'play': {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+                checkPaused();
+            }
+            case 'loop': {
+                if (audio.loop == true) {
+                    audio.loop = false;
+                    repeat.style.color = "white";
+                } else {
+                    repeat.style.color = "dodgerblue";
+                    audio.loop = true;
+                }
+            }
+            case 'unloop': {
+                if (audio.loop == false) {
+                    audio.loop = true;
+                    repeat.style.color = "white";
+                } else {
+                    repeat.style.color = "dodgerblue";
+                    audio.loop = false;
+                }
+            }
+        }
+    }
+    console.log(recognition);
+    if(speech == true) {
+        recognition.start();
     }
 });
 
@@ -442,5 +505,4 @@ window.addEventListener("resize", () => {
     canvas.width = canvas.parentElement.offsetWidth;
     canvas.height = canvas.parentElement.offsetHeight;
 });
-
 
