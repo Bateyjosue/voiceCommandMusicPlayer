@@ -311,11 +311,17 @@ shuffle_btn.addEventListener("click", () => {
                 audio.play();
                 checkPaused();
             }
-            case 'pause': {
+            case 'stop': {
                 audio.pause();
+                audio.currentTime = 0;
             }
-            case 'off': {
-                audio.pause();
+            case 'pause': {
+                if (!audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+                checkPaused();
             }
             case 'play': {
                 if (audio.paused) {
