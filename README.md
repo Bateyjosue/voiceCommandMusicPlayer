@@ -97,10 +97,6 @@ Install the project using this command:
 - ### Install dependencies
       `pip install -r requirements.text`
 
-- ### Make Migrate
-  ```
-  python3 man
-
 
 ### Usage
 
