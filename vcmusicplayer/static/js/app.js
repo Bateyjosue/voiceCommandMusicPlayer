@@ -1,6 +1,6 @@
 const navs = document.querySelectorAll('.nav__link__item');
 
-console.log(navs);
+// console.log(navs);
 
 // SELECTING ELEMENTS.
 let ripple_buttons = document.querySelectorAll(".ripple"),
@@ -95,7 +95,7 @@ let time = setInterval(() => {
 // NAVIGATION LINK'S ACTIVE CLASS
 nav_links.forEach((btn) => {
     btn.addEventListener("click", (e) => {
-      console.log(e.target);
+    //   console.log(e.target);
         nav_links.forEach((link) => {
             link.classList.remove("active");
         });
@@ -127,13 +127,13 @@ if (music_title.textContent.length > 13) {
 
 // ADDITIONAL NAVIGATION LINKS.
 nav_links[0].addEventListener("click", (e) => {
-  console.log(e.target);
+//   console.log(e.target);
     AV_player.classList.add("on");
     music_list.classList.remove("on");
 });
 
 nav_links[1].addEventListener("click", (e) => {
-  console.log(e.target);
+//   console.log(e.target);
     music_list.classList.add("on");
     AV_player.classList.remove("on");
 });
@@ -205,7 +205,7 @@ input_file.addEventListener("change", () => {
                     li.querySelector("span").textContent ==
                     music_title.querySelector("span").textContent
                 ) {
-                    console.log(li);
+                    // console.log(li);
                     li.classList.add("playing");
                 } else {
                     li.classList.remove("playing");
@@ -238,7 +238,7 @@ function LoadMusic(music_index) {
     checkPaused();
 }
 
-next_btn.addEventListener("click", () => {
+const next = ()=> {
     if (music_index > music_array.length - 1) {
         music_index = 0;
     } else {
@@ -247,6 +247,21 @@ next_btn.addEventListener("click", () => {
     LoadMusic(music_index);
     audio.play();
     checkPaused();
+}
+
+const prev= () => {
+    if (music_index < 0) {
+        music_index = music_array.length - 1;
+    } else {
+        music_index--;
+    }
+    LoadMusic(music_index);
+    audio.play();
+    checkPaused();
+}
+
+next_btn.addEventListener("click", () => {
+   next()
 });
 
 prev_btn.addEventListener("click", () => {
@@ -289,27 +304,14 @@ shuffle_btn.addEventListener("click", () => {
         const transcript = Array.from(e.results)
         .map(result => result[0])
         .map(result => result.transcript)
-        console.log(transcript);
         switch(transcript[transcript.length - 1].toLowerCase()) {
             case 'next': {
-                if (music_index > music_array.length - 1) {
-                    music_index = 0;
-                } else {
-                    music_index++;
-                }
-                LoadMusic(music_index);
-                audio.play();
-                checkPaused();
+                next();
+                break;
             }
             case 'back': {
-                if (music_index < 0) {
-                    music_index = music_array.length - 1;
-                } else {
-                    music_index--;
-                }
-                LoadMusic(music_index);
-                audio.play();
-                checkPaused();
+                prev();
+                // break;
             }
             case 'stop': {
                 audio.pause();
@@ -343,9 +345,9 @@ shuffle_btn.addEventListener("click", () => {
             case 'unloop': {
                 if (audio.loop == false) {
                     audio.loop = true;
-                    repeat.style.color = "white";
-                } else {
                     repeat.style.color = "dodgerblue";
+                } else {
+                    repeat.style.color = "white";
                     audio.loop = false;
                 }
             }
