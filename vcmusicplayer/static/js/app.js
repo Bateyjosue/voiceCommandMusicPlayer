@@ -345,10 +345,10 @@ shuffle_btn.addEventListener("click", () => {
             case 'unloop': {
                 if (audio.loop == false) {
                     audio.loop = true;
-                    repeat.style.color = "dodgerblue";
-                } else {
                     repeat.style.color = "white";
+                } else {
                     audio.loop = false;
+                    repeat.style.color = "dodgerblue";
                 }
             }
         }
