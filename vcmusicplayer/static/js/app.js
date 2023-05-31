@@ -304,6 +304,7 @@ shuffle_btn.addEventListener("click", () => {
         const transcript = Array.from(e.results)
         .map(result => result[0])
         .map(result => result.transcript)
+        console.log(transcript);
         switch(transcript[transcript.length - 1].toLowerCase()) {
             case 'next': {
                 next();
